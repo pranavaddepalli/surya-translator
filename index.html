@@ -54,6 +54,7 @@
         var e = text.value.replaceAll("ii", "y");
         e = e.replaceAll("7", "t");
         e = e.replaceAll("0", "o");
+        e = e.replaceAll("II", "Y");
         p.innerHTML = e;
       }
       function translate_e2s() {
@@ -62,6 +63,9 @@
         var s = text.value.replaceAll("y", "ii");
         s = s.replaceAll("t", "7");
         s = s.replaceAll("o", "0");
+        s = s.replaceAll("O", "0");
+        s = s.replaceAll("T", "7");
+        s = s.replaceAll("Y", "7");
         p.innerHTML = s;
       }
     </script>
