@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Surya-English Translator</title>
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <h1 id="main">Surya to English</h1>
+
+        <form>
+          <textarea
+            name="text"
+            id="formText1"
+            placeholder="Surya text"
+          ></textarea
+          ><br /><br />
+          <input
+            type="button"
+            onclick="translate_s2e()"
+            id="translate1"
+            value="translate1"
+          />
+        </form>
+
+        <p id="s2eresult"></p>
+      </div>
+
+      <div>
+        <h1>English to Surya</h1>
+        <form>
+          <textarea
+            name="text"
+            id="formText2"
+            placeholder="English text"
+          ></textarea
+          ><br /><br />
+          <input type="button"             onclick="translate_e2s()"
+          id="translate2" value="translate2" />
+        </form>
+
+        <p id="e2sresult"></p>
+      </div>
+    </div>
+
+    <script>
+      function translate_s2e() {
+        var p = document.getElementById("s2eresult");
+        var text = document.getElementById("formText1");
+        var e = text.value.replaceAll("ii", "y");
+        e = e.replaceAll("7", "t");
+        e = e.replaceAll("0", "o");
+        p.innerHTML = e;
+      }
+      function translate_e2s() {
+        var p = document.getElementById("e2sresult");
+        var text = document.getElementById("formText2");
+        var s = text.value.replaceAll("y", "ii");
+        s = s.replaceAll("t", "7");
+        s = s.replaceAll("o", "0");
+        p.innerHTML = s;
+      }
+    </script>
+
+    <style>
+      body {
+        background: #20262e;
+        padding: 20px;
+        font-family: Helvetica;
+        font-size: 15px;
+        text-align: center;
+        color: #fff;
+      }
+
+      #formText1, #formText2 {
+        width: 60%;
+        height: 15em;
+      }
+
+      #translate {
+        background: #0084ff;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 14px;
+        font-size: 15px;
+        color: #fff;
+      }
+    </style>
+  </body>
+</html>
