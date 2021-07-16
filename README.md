@@ -5,3 +5,6 @@ My friend's keyboard is broken. This is literally just to let him type in real E
 This is terribly written code and was done out of necessity, please don't look at it
 
 https://pranavaddepalli.github.io/surya-translator/
+
+
+There's an offline version too :)
